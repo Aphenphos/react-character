@@ -1,8 +1,12 @@
-import React from 'react';
-import Main from '../Main/Main';
+import React, { useState } from 'react';
 import './Controls.css';
 
-export default function Controls({ setHead, setBody, setLegs, setH, setB, setL }) {
+export default function Controls({ setHead, setBody, setLegs, setH, setQuotes, setB, setL }) {
+  const [curQuote, setCurQuote] = useState('');
+  const saveQuote = () => {
+    setQuotes((prevQuotes) => [curQuote, ...prevQuotes]);
+    setCurQuote('');
+  };
   return (
     <div className="controls">
       <div id="head-control">
@@ -32,6 +36,8 @@ export default function Controls({ setHead, setBody, setLegs, setH, setB, setL }
           </select>
         </label>
       </div>
+      <input type="text" value={curQuote} onChange={(e) => setCurQuote(e.target.value)}/>
+      <button onClick={saveQuote}>Save Quote</button>
     </div>
   );
 }

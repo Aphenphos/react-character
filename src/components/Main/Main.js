@@ -10,6 +10,7 @@ export default function Main() {
   const [hCount, setH] = useState(0);
   const [bCount, setB] = useState(0);
   const [lCount, setL] = useState(0);
+  const [quotes, setQuotes] = useState([]);
 
   return (
     <main>
@@ -20,12 +21,14 @@ export default function Main() {
         setBody={setBody}
         setL={setL}
         setLegs={setLegs}
+        setQuotes={setQuotes}
         
       />
       <Display
         hcount = {hCount} head={head} 
         bcount = {bCount} body={body} 
         lcount = {lCount} legs={legs}
+        quotes = {quotes}
       />
     </main>
   );
