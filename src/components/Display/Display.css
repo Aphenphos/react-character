@@ -1,0 +1,8 @@
+#body-container {
+    display: grid;
+    grid-template-columns: 100vw;
+}
+
+img {
+    max-height: 300px;
+}
