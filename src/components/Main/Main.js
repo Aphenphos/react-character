@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Controls from '../Controls/Controls';
 import Display from '../Display/Display';
+import Quotes from '../Quotes/Quotes';
 import './Main.css';
 
 export default function Main() {
@@ -15,6 +16,9 @@ export default function Main() {
   return (
     <main>
       <Controls 
+        hCount={hCount}
+        bCount={bCount}
+        lCount={lCount}
         setH={setH}
         setHead={setHead}
         setB={setB}
@@ -22,13 +26,14 @@ export default function Main() {
         setL={setL}
         setLegs={setLegs}
         setQuotes={setQuotes}
-        
       />
       <Display
         hcount = {hCount} head={head} 
         bcount = {bCount} body={body} 
         lcount = {lCount} legs={legs}
-        quotes = {quotes}
+      />
+      <Quotes 
+        quotes={quotes}
       />
     </main>
   );

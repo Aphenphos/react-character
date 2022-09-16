@@ -1,6 +1,6 @@
 import React from 'react';
 import './Display.css';
-export default function Display({ head, body, legs, hcount, bcount, lcount, quotes }) {
+export default function Display({ head, body, legs, hcount, bcount, lcount }) {
 
   return (
     <div id="body-container">
